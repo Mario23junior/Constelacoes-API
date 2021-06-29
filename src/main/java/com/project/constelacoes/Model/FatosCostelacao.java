@@ -4,14 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+ 
 @Entity
 public class FatosCostelacao {
 	
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String img;
+	private String imagem;
 	private String nome;
 	private String abreviacao;
 	
@@ -21,11 +21,11 @@ public class FatosCostelacao {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getImg() {
-		return img;
+	public String getImagem() {
+		return imagem;
 	}
-	public void setImg(String img) {
-		this.img = img;
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 	public String getNome() {
 		return nome;
@@ -39,6 +39,4 @@ public class FatosCostelacao {
 	public void setAbreviacao(String abreviacao) {
 		this.abreviacao = abreviacao;
 	}
-	
-	
 }
