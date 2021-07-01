@@ -12,11 +12,14 @@ public class Catalogacao {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private Boolean visibilidadeOlhoNu;
-	private String estrelaPrincipal;
-	private Double magnitudeAparente;
+	private String estrelaPrincipal;	
+ 	private String magnitudeAparente;
 	
 	public Long getId() {
 		return id;
+	}
+	public void setMagnitudeAparente(String magnitudeAparente) {
+		this.magnitudeAparente = magnitudeAparente;
 	}
 	public void setId(Long id) {
 		this.id = id;
@@ -33,12 +36,9 @@ public class Catalogacao {
 	public void setEstrelaPrincipal(String estrelaPrincipal) {
 		this.estrelaPrincipal = estrelaPrincipal;
 	}
-	public Double getMagnitudeAparente() {
+	public String getMagnitudeAparente() {
 		return magnitudeAparente;
 	}
-	public void setMagnitudeAparente(Double magnitudeAparente) {
-		this.magnitudeAparente = magnitudeAparente;
-	}
-	
+	 
 	
 }
