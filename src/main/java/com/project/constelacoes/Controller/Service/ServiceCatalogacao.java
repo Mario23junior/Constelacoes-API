@@ -26,4 +26,13 @@ public class ServiceCatalogacao {
 		return list.orElseThrow(() -> new NotValueDataCatalogacao("Não existe essas informação"));
 	}
 	
+	public void updateData(Catalogacao catalogacao, Long id){
+		 catalogacaoRepository
+		                 .findById(id)
+		                 .map(updateData -> {
+		                	 catalogacao.setId(catalogacao.getId());
+		                	 catalogacaoRepository.save(catalogacao);
+		                	 return updateData;
+ 		                 }).orElseThrow(() -> new NotValueDataCatalogacao("erro ao atualizar informações"));
+	}
 }
