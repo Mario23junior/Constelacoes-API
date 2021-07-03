@@ -1,5 +1,6 @@
 package com.project.constelacoes.Controller;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,6 +36,11 @@ public class ControllerCatalogacao {
 	@PutMapping("/{id}")
 	public void updateData(@RequestBody Catalogacao catalogacao, @PathVariable Long id) {
 		  serviceCatalogacao.updateData(catalogacao, id);
+	}
+	
+	@DeleteMapping("/{id}")
+	public void deleteData(@PathVariable Long id) {
+		serviceCatalogacao.deleteData(id);
 	}
 	
 	
