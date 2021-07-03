@@ -35,4 +35,13 @@ public class ServiceCatalogacao {
 		                	 return updateData;
  		                 }).orElseThrow(() -> new NotValueDataCatalogacao("erro ao atualizar informações"));
 	}
+	
+	public void deleteData(Long id) {
+	    	 catalogacaoRepository
+		                     .findById(id)
+		                     .map(deleteId -> {
+		                    	  catalogacaoRepository.deleteById(id);
+		                    	  return deleteId;
+		                     }).orElseThrow(() -> new NotValueDataCatalogacao("Erro a deletar informações"));
+	}
 }
