@@ -1,7 +1,5 @@
 package com.project.constelacoes.Controller;
 
-import java.util.Optional;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,7 +27,7 @@ public class ControllerCatalogacao {
 	}
 	
 	@GetMapping("/{id}")
-	public Optional<Catalogacao> listId(@PathVariable Long id) {
+	public Catalogacao listId(@PathVariable Long id) {
 		return serviceCatalogacao.listDataById(id);
 	}
 }
