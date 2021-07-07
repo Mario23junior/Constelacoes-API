@@ -41,7 +41,5 @@ public class ControllerCatalogacao {
 	@DeleteMapping("/{id}")
 	public void deleteData(@PathVariable Long id) {
 		serviceCatalogacao.deleteData(id);
-	}
-	
-	
+	}	
 }

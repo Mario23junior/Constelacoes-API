@@ -43,5 +43,5 @@ public class ServiceCatalogacao {
 		                    	  catalogacaoRepository.deleteById(id);
 		                    	  return deleteId;
 		                     }).orElseThrow(() -> new NotValueDataCatalogacao("Erro a deletar informações"));
-	}
+	}	
 }
