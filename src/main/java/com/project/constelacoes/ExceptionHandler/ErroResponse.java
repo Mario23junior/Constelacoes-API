@@ -12,7 +12,14 @@ public class ErroResponse {
 	private Date timestmap;
 	private String message;
 	private String path;
-	
+
+	public ErroResponse(int status, Date timestmap, String message, String path) {
+		super();
+		this.status = status;
+		this.timestmap = timestmap;
+		this.message = message;
+		this.path = path;
+	}
 	public int getStatus() {
 		return status;
 	}
