@@ -1,5 +1,7 @@
 package com.project.constelacoes.Controller;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,13 +25,13 @@ public class ControllerCatalogacao {
 	}
 	
 	@PostMapping("/")
-	public Catalogacao save(@RequestBody Catalogacao catalogacao){
+	public Catalogacao save(@RequestBody @Valid Catalogacao catalogacao){
 	   Catalogacao salvarDados = serviceCatalogacao.salvar(catalogacao);
 	   return salvarDados;
 	}
 	
 	@GetMapping("/{id}")
-	public Catalogacao listId(@PathVariable Long id) {
+	public Catalogacao listId(@PathVariable @Valid Long id) {
 		return serviceCatalogacao.listDataById(id);
 	}
 	
