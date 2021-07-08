@@ -23,7 +23,7 @@ public class ServiceCatalogacao {
 	
 	public Catalogacao listDataById(Long id) {
 		Optional<Catalogacao> list = catalogacaoRepository.findById(id);
-		return list.orElseThrow(() -> new NotValueDataCatalogacao("Não existe essas informação"));
+		return list.orElseThrow(() -> new NotValueDataCatalogacao("informação não encontrada"));
 	}
 	
 	public void updateData(Catalogacao catalogacao, Long id){
