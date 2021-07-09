@@ -47,6 +47,4 @@ public class ServiceCoordenadas {
 		                        return update;
 		                    }).orElseThrow(() -> new NotValueDataCatalogacao("Nenhuma informaçao encontrado para ser atualizada"));
 	}
-	
-	
 }
