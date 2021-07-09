@@ -37,4 +37,16 @@ public class ServiceCoordenadas {
 		                   }).orElseThrow(() -> new NotValueDataCatalogacao("Informacão não encontrada para ser deletadas"));
 		 
 	}
+	
+	public void updateData(Long id , Coordenadas coordenadas) {
+		 coordenadasRepository
+		                    .findById(id)
+		                    .map(update -> {
+		                        coordenadas.setId(update.getId());
+		                        coordenadasRepository.save(coordenadas);
+		                        return update;
+		                    }).orElseThrow(() -> new NotValueDataCatalogacao("Nenhuma informaçao encontrado para ser atualizada"));
+	}
+	
+	
 }
