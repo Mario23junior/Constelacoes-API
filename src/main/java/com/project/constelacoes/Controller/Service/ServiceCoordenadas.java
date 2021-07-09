@@ -27,4 +27,14 @@ public class ServiceCoordenadas {
 		 listIdCoor.orElseThrow(() -> new NotValueDataCatalogacao("Id inesistente na base de dados"));
 		 return listIdCoor;
  	}
+	
+	public void deleteData(Long id) {
+		 coordenadasRepository
+		                   .findById(id)
+		                   .map(deleteId -> {
+		                	   coordenadasRepository.deleteById(id);
+		                	   return deleteId;
+		                   }).orElseThrow(() -> new NotValueDataCatalogacao("Informacão não encontrada para ser deletadas"));
+		 
+	}
 }
