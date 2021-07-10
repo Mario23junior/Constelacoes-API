@@ -35,4 +35,14 @@ public class ServiceDadosObservacionais {
 	                        	return delete;
 	                         });
 	}
+	
+	public void updateId(Long id , DadosObservacionais dadosObservacionais) {
+		dadosObservacionaisRepository
+		                            .findById(id)
+		                            .map(atualizar -> {
+		                            	dadosObservacionais.setId(atualizar.getId());
+		                            	dadosObservacionaisRepository.save(dadosObservacionais);
+		                            	return atualizar;
+		                            }).orElseThrow(() -> new NotValueDataCatalogacao("Nenhum valor encontrado para atulizar"));
+	}
 }
