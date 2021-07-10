@@ -26,4 +26,13 @@ public class ServiceDadosObservacionais {
 		dadosObser.orElseThrow(() -> new NotValueDataCatalogacao("Valos de observação não encontrado"));
 		return dadosObser;
 	}
+	
+	public void deleteId(Long id) {
+	 dadosObservacionaisRepository
+	                         .findById(id)
+	                         .map(delete -> {
+	                        	dadosObservacionaisRepository.deleteById(id);
+	                        	return delete;
+	                         });
+	}
 }
