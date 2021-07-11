@@ -36,4 +36,13 @@ public class ServiceFatosCostelacao {
 				                             return update;
 				                        }).orElseThrow(() -> new NotValueDataCatalogacao("Nenhuma informação encontrada para ser atualizada"));
   	}
-}  
+	
+	public void delete(Long id) {
+		fatosCostelacaoRepository
+		                        .findById(id)
+		                        .map(deleteData -> {
+		                        	fatosCostelacaoRepository.deleteById(id);
+		                        	return deleteData;
+		                        }).orElseThrow(() -> new NotValueDataCatalogacao("Nenhum valor encontrado para dowloads"));
+	}                  
+} 
