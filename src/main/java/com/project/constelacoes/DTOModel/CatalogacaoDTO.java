@@ -10,11 +10,8 @@ public class CatalogacaoDTO {
   	private String magnitudeAparente;
   	
   	private List<CoordenadasDTO> corCoordenadasDTOs;
-  	
   	private List<DadosObservacionaisDTO> dadosObservacionaisDTOs;
-  	
   	private List<FatosCostelecaoDTO> fatosCostelecaoDTOs;
-  	
   	
 	public List<CoordenadasDTO> getCorCoordenadasDTOs() {
 		return corCoordenadasDTOs;
