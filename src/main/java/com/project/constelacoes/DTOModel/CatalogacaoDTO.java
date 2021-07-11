@@ -1,5 +1,7 @@
 package com.project.constelacoes.DTOModel;
 
+import java.util.List;
+
 public class CatalogacaoDTO {
    
 	private Long id;
@@ -7,7 +9,31 @@ public class CatalogacaoDTO {
  	private String estrelaPrincipal;		
   	private String magnitudeAparente;
   	
-  
+  	private List<CoordenadasDTO> corCoordenadasDTOs;
+  	
+  	private List<DadosObservacionaisDTO> dadosObservacionaisDTOs;
+  	
+  	private List<FatosCostelecaoDTO> fatosCostelecaoDTOs;
+  	
+  	
+	public List<CoordenadasDTO> getCorCoordenadasDTOs() {
+		return corCoordenadasDTOs;
+	}
+	public void setCorCoordenadasDTOs(List<CoordenadasDTO> corCoordenadasDTOs) {
+		this.corCoordenadasDTOs = corCoordenadasDTOs;
+	}
+	public List<DadosObservacionaisDTO> getDadosObservacionaisDTOs() {
+		return dadosObservacionaisDTOs;
+	}
+	public void setDadosObservacionaisDTOs(List<DadosObservacionaisDTO> dadosObservacionaisDTOs) {
+		this.dadosObservacionaisDTOs = dadosObservacionaisDTOs;
+	}
+	public List<FatosCostelecaoDTO> getFatosCostelecaoDTOs() {
+		return fatosCostelecaoDTOs;
+	}
+	public void setFatosCostelecaoDTOs(List<FatosCostelecaoDTO> fatosCostelecaoDTOs) {
+		this.fatosCostelecaoDTOs = fatosCostelecaoDTOs;
+	}
 	public Long getId() {
 		return id;
 	}
