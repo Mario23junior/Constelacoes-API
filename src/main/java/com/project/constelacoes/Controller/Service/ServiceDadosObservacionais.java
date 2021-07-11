@@ -33,7 +33,7 @@ public class ServiceDadosObservacionais {
 	                         .map(delete -> {
 	                        	dadosObservacionaisRepository.deleteById(id);
 	                        	return delete;
-	                         });
+	                         }).orElseThrow(() -> new NotValueDataCatalogacao("Nenhum valor encontrado para ser deletado"));
 	}
 	
 	public void updateId(Long id , DadosObservacionais dadosObservacionais) {
