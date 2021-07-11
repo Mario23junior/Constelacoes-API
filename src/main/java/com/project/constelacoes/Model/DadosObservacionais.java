@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -22,6 +23,18 @@ public class DadosObservacionais {
 	private Date passagemMeridianal;
 	
   	private Double hora;
+  	
+  	@ManyToOne
+  	private Catalogacao catalogacao;
+  	
+  	
+	public Catalogacao getCatalogacao() {
+		return catalogacao;
+	}
+
+	public void setCatalogacao(Catalogacao catalogacao) {
+		this.catalogacao = catalogacao;
+	}
 
 	public Long getId() {
 		return id;

@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
  
 @Entity
 public class FatosCostelacao {
@@ -15,6 +16,15 @@ public class FatosCostelacao {
 	private String nome;
 	private String abreviacao;
 	
+	@ManyToOne
+    private Catalogacao catalogacao;
+	
+	public Catalogacao getCatalogacao() {
+		return catalogacao;
+	}
+	public void setCatalogacao(Catalogacao catalogacao) {
+		this.catalogacao = catalogacao;
+	}
 	public Long getId() {
 		return id;
 	}

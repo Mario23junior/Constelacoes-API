@@ -1,9 +1,13 @@
 package com.project.constelacoes.Model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 @Entity
@@ -15,7 +19,35 @@ public class Catalogacao {
  	private Boolean visibilidadeOlhoNu;
  	private String estrelaPrincipal;		
   	private String magnitudeAparente;
+  	
+  	@OneToMany(mappedBy = "catalogacao",cascade = CascadeType.ALL)
+  	private List<Coordenadas> corrdenadas;
+  	
+  	@OneToMany(mappedBy = "catalogacao",cascade = CascadeType.ALL)
+  	private List<DadosObservacionais> dadosObservacionais;
+  	
+  	@OneToMany(mappedBy = "catalogacao",cascade = CascadeType.ALL)
+  	private List<FatosCostelacao> fatosCostelacaos;
 	
+  
+	public List<Coordenadas> getCorrdenadas() {
+		return corrdenadas;
+	}
+	public void setCorrdenadas(List<Coordenadas> corrdenadas) {
+		this.corrdenadas = corrdenadas;
+	}
+	public List<DadosObservacionais> getDadosObservacionais() {
+		return dadosObservacionais;
+	}
+	public void setDadosObservacionais(List<DadosObservacionais> dadosObservacionais) {
+		this.dadosObservacionais = dadosObservacionais;
+	}
+	public List<FatosCostelacao> getFatosCostelacaos() {
+		return fatosCostelacaos;
+	}
+	public void setFatosCostelacaos(List<FatosCostelacao> fatosCostelacaos) {
+		this.fatosCostelacaos = fatosCostelacaos;
+	}
 	public Long getId() {
 		return id;
 	}
