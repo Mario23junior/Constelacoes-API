@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Coordenadas {
@@ -15,6 +16,16 @@ public class Coordenadas {
     private Double declinacao;
     private Double areaTotal;
     
+    @ManyToOne
+    private Catalogacao catalogacao;
+    
+
+	public Catalogacao getCatalogacao() {
+		return catalogacao;
+	}
+	public void setCatalogacao(Catalogacao catalogacao) {
+		this.catalogacao = catalogacao;
+	}
 	public Long getId() {
 		return id;
 	}
