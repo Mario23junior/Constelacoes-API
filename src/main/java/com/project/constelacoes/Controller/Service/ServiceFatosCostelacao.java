@@ -26,4 +26,14 @@ public class ServiceFatosCostelacao {
       informaDados.orElseThrow(() -> new NotValueDataCatalogacao("informação não encontrada"));
 		return informaDados;
  	}
+	
+	public void update(Long id, FatosCostelacao fatosCostelacao) {
+		        fatosCostelacaoRepository
+				                       .findById(id)
+				                       .map(update -> {
+				                             fatosCostelacao.setId(update.getId());
+				                             fatosCostelacaoRepository.save(fatosCostelacao);
+				                             return update;
+				                        }).orElseThrow(() -> new NotValueDataCatalogacao("Nenhuma informação encontrada para ser atualizada"));
+  	}
 }  
