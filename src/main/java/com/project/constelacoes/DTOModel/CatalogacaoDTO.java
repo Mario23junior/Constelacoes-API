@@ -7,6 +7,7 @@ public class CatalogacaoDTO {
  	private String estrelaPrincipal;		
   	private String magnitudeAparente;
   	
+  
 	public Long getId() {
 		return id;
 	}
