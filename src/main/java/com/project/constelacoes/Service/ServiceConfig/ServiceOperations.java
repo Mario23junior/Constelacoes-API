@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
 
 import com.project.constelacoes.DTOModel.CatalogacaoDTO;
 import com.project.constelacoes.Model.Catalogacao;
@@ -15,7 +16,7 @@ public class ServiceOperations implements Implements {
 	private CatalogacaoRepository catalogacaoRepository;
 	private ModelMapper modelMapper;
 	
-	public ServiceOperations(CatalogacaoRepository ModelMapper) {
+	public ServiceOperations(CatalogacaoRepository catalogacaoRepository, ModelMapper modelMapper) {
 		this.modelMapper = modelMapper;
 		this.catalogacaoRepository = catalogacaoRepository;
  	 }
@@ -29,8 +30,17 @@ public class ServiceOperations implements Implements {
 	}
 	
 	public CatalogacaoDTO ConvertToCatalogocaoToCatalogacaoDTO(Catalogacao catalogacao) {
-		return null;
+	    modelMapper.getConfiguration()
+	               .setMatchingStrategy(MatchingStrategies.LOOSE);
+	    CatalogacaoDTO catalogacaoDTO = modelMapper.map(catalogacao, CatalogacaoDTO.class);
+	    
+	    return catalogacaoDTO;
+ 	}
+	
+	public List<CatalogacaoDTO> listAllDataDTO(){
+		List<CatalogacaoDTO> listData = ListAllInformations();
+		return listData
+				     .stream()
+				     .collect(Collectors.toList());
 	}
-	
-	
 }
