@@ -9,28 +9,10 @@ public class CatalogacaoDTO {
  	private String estrelaPrincipal;		
   	private String magnitudeAparente;
   	
-  	private List<CoordenadasDTO> corCoordenadasDTOs;
+  	private List<CoordenadasDTO> coordenadasDTOs;
   	private List<DadosObservacionaisDTO> dadosObservacionaisDTOs;
   	private List<FatosCostelecaoDTO> fatosCostelecaoDTOs;
   	
-	public List<CoordenadasDTO> getCorCoordenadasDTOs() {
-		return corCoordenadasDTOs;
-	}
-	public void setCorCoordenadasDTOs(List<CoordenadasDTO> corCoordenadasDTOs) {
-		this.corCoordenadasDTOs = corCoordenadasDTOs;
-	}
-	public List<DadosObservacionaisDTO> getDadosObservacionaisDTOs() {
-		return dadosObservacionaisDTOs;
-	}
-	public void setDadosObservacionaisDTOs(List<DadosObservacionaisDTO> dadosObservacionaisDTOs) {
-		this.dadosObservacionaisDTOs = dadosObservacionaisDTOs;
-	}
-	public List<FatosCostelecaoDTO> getFatosCostelecaoDTOs() {
-		return fatosCostelecaoDTOs;
-	}
-	public void setFatosCostelecaoDTOs(List<FatosCostelecaoDTO> fatosCostelecaoDTOs) {
-		this.fatosCostelecaoDTOs = fatosCostelecaoDTOs;
-	}
 	public Long getId() {
 		return id;
 	}
@@ -54,5 +36,25 @@ public class CatalogacaoDTO {
 	}
 	public void setMagnitudeAparente(String magnitudeAparente) {
 		this.magnitudeAparente = magnitudeAparente;
-	} 	
+	}
+	public List<CoordenadasDTO> getCoordenadasDTOs() {
+		return coordenadasDTOs;
+	}
+	public void setCoordenadasDTOs(List<CoordenadasDTO> coordenadasDTOs) {
+		this.coordenadasDTOs = coordenadasDTOs;
+	}
+	public List<DadosObservacionaisDTO> getDadosObservacionaisDTOs() {
+		return dadosObservacionaisDTOs;
+	}
+	public void setDadosObservacionaisDTOs(List<DadosObservacionaisDTO> dadosObservacionaisDTOs) {
+		this.dadosObservacionaisDTOs = dadosObservacionaisDTOs;
+	}
+	public List<FatosCostelecaoDTO> getFatosCostelecaoDTOs() {
+		return fatosCostelecaoDTOs;
+	}
+	public void setFatosCostelecaoDTOs(List<FatosCostelecaoDTO> fatosCostelecaoDTOs) {
+		this.fatosCostelecaoDTOs = fatosCostelecaoDTOs;
+	}
+  	
+  	
 }

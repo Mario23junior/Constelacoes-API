@@ -5,12 +5,14 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
+import org.springframework.stereotype.Service;
 
 import com.project.constelacoes.DTOModel.CatalogacaoDTO;
 import com.project.constelacoes.Model.Catalogacao;
 import com.project.constelacoes.Repository.CatalogacaoRepository;
 import com.project.constelacoes.Service.Implements;
 
+@Service
 public class ServiceOperations implements Implements {
   
 	private CatalogacaoRepository catalogacaoRepository;
