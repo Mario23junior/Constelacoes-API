@@ -1,4 +1,4 @@
-<p align="center"><img src="logo/logo.gif" width = "723px" height="383px"></p>
+<p align="center"><img src="src/main/resources/logo/logo.gif" width = "723px" height="383px"></p>
 
 
 
