@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "c6163063-5f32-4259-af05-f08d20827da7",
+		"name": "Costelacoes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Catalogacao",
+			"item": [
+				{
+					"name": "Catalogacao",
+					"item": [
+						{
+							"name": "Salvando dados de catalogacao no banco de dados",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"visibilidadeOlhoNu\":\"false\",\n    \"estrelaPrincipal\":\"ANT\",\n    \"magnitudeAparente\":\"05/04\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/api/catalogacaos/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"catalogacaos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "listando dados de catalogacao",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/api/catalogacaos/23",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"catalogacaos",
+										"23"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizando informaçãoes",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"visibilidadeOlhoNu\": true,\n    \"estrelaPrincipal\": \"ANT\",\n    \"magnitudeAparente\": \"05/04\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/api/catalogacaos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"catalogacaos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletando informacoes por id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/api/catalogacaos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"catalogacaos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Coordenadas",
+					"item": [
+						{
+							"name": "Salvando cordenadas no banco de dadso",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"scencaoReta\":\"10:30\",\n   \"declinacao\": -30,\n   \"areaTotal\": 239\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/api/coordenadas",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"coordenadas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "listar dados por id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/api/coordenadas/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"coordenadas",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletando informacoes no banco de dados",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/api/coordenadas/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"coordenadas",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "atualizar informações de dados",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"scencaoReta\": \"999999999999999999999999\",\n    \"declinacao\": -30.0,\n    \"areaTotal\": 239.0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/api/coordenadas/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"coordenadas",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DadosObservacionais",
+					"item": [
+						{
+							"name": "Salvanddo informacoes de dados observacionais",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"latitudeMinima\": -90,\n    \"latitudeMaxima\": 45,\n    \"passagemMeridianal\": \"5/05\",\n    \"hora\": 21\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/api/dadosObservacionais",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"dadosObservacionais"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LIstando dados observacionais",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/api/dadosObservacionais/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"dadosObservacionais",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletando informacões observacionais da base de dados",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/api/dadosObservacionais/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"dadosObservacionais",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizando dados do banco de dados",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"latitudeMinima\": -90.0,\n    \"latitudeMaxima\": 77.0,\n    \"passagemMeridianal\": \"05/05\",\n    \"hora\": 21.0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/api/dadosObservacionais/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"dadosObservacionais",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Fatos costelacao",
+					"item": [
+						{
+							"name": "Salvando informacoes de fatosCostelacaos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"imagem\":\"http://4.bp.blogspot.com/-mPQymd-zYrs/UOd13Cpw1eI/AAAAAAAAE-s/BlnxigMGWFk/s1600/Antlia_constellation_mapFINAL+INVERTIDO.jpg\",\n    \"nome\":\"antlia\",\n    \"abreviacao\":\"ant\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/api/fatosCostelacao",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"fatosCostelacao"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "listando listando informacoes de fatos costelacao",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/api/fatosCostelacao/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"fatosCostelacao",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizando informacaoes daa base de dados FatosCostelecao",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"imagem\": \"http://4.bp.blogspot.com/-mPQymd-zYrs/UOd13Cpw1eI/AAAAAAAAE-s/BlnxigMGWFk/s1600/Antlia_constellation_mapFINAL+INVERTIDO.jpg\",\n    \"nome\": \"antlia\",\n    \"abreviacao\": \"eeeeeeeeeeeee\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/api/fatosCostelacao/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"fatosCostelacao",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletando dados por id da tabela fatos costelacao",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/api/fatosCostelacao/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"fatosCostelacao",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "BaseDataDTOs",
+					"item": [
+						{
+							"name": "LIstando todos os dados finais DTO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/v1/api/listAll",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"api",
+										"listAll"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
