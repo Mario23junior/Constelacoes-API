@@ -49,7 +49,7 @@ localhost:8080/v1/api/listAll
 ```
 
 ## Resultado das informações das costelaçãoes API
-```
+```json
 [
     {
         "id": 4,
